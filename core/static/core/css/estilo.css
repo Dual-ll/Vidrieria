@@ -1,0 +1,16 @@
+.fondo1 {
+    padding: 15px;
+    background-color:rgb(230, 247, 255);
+  }
+
+.material-icons {
+    color:rgb(19, 50, 138)
+}
+
+.fondo2 {
+    padding-bottom: 0px;
+}
+
+.parallax-container {
+    height: 400px;
+  }

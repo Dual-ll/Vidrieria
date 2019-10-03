@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--materialize.css-->
+    <link rel="stylesheet" href="../../static/core/css/materialize.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="../../static/core/css/estilo.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenido</title>
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="#!" class="brand-logo">VIDRIOS</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Quienes Somos</a></li>
+                <li><a href="#">Contactenos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Quienes Somos</a></li>
+        <li><a href="#">Contectenos</a></li>
+    </ul>
+    <!--CAROUSEL-->
+    <div id="carousel" class="carousel carousel-slider">
+        <div class="carousel-fixed-item center">
+            <a class="btn waves-effect blue white-text">Nuestros servicios</a>
+        </div>
+        <a class="carousel-item" href="#one!"><img src="../../static/core/img/carousel1.jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="../../static/core/img/carousel2.jpg"></a>
+    </div>
+
+    <div class=fondo1>
+        <div class="container fondo1">
+            <div class="center row">
+                <div class="col s6">
+                    <i class="large material-icons">check</i>
+                    <p class="flow-text">Calidad</p>
+                    <blockquote class="light center flow-text">
+                        Descripcion de la calidad de los productos y/o servicios, usando palabras
+                        bonitas pero simples
+                    </blockquote>
+                </div>
+                <div class="col s6">
+                    <i class="large material-icons">attach_money</i>
+                    <p class="flow-text">Rentable</p>
+                    <blockquote class="light center flow-text">
+                        Descripcion de la rentabilidad de los productos y/o servicios, usando palabras
+                        bonitas pero simples
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--BOTON FLOTANTE-->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large blue waves-effect waves-circle">
+            <i class="large material-icons">dehaze</i>
+        </a>
+        <ul>
+            <li><a href="https://api.whatsapp.com/send?phone=56961635166&text=Contactenos!"
+                    class="btn-floating green tooltipped" data-position="left" data-tooltip="WhatsApp"><i
+                        class="material-icons">perm_phone_msg</i></a></li>
+            <li><a href="https://www.google.cl/maps/place/Vidrieria+Gabriela/@-33.580336,-70.5917123,17z/data=!3m1!4b1!4m11!1m5!8m4!1e2!2s110549832271251034080!3m1!1e1!3m4!1s0x9662d7ba43ea43b7:0x15f3c958cb5dac82!8m2!3d-33.580336!4d-70.5895236"
+                    class="btn-floating black tooltipped" data-position="left" data-tooltip="Ubicacion"><i
+                        class="material-icons">map</i></a></li>
+        </ul>
+    </div>
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="../../static/core/img/parallax.jpg"></div>
+    </div>
+    <div class="fondo2">
+
+    </div>
+
+    <!--FOOTER-->
+    <footer class="page-footer blue">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Vidrieria EL WETA</h5>
+                    <p class="white-text text-lighten-4">La mejor vidrieria para todos los w e t a s</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="white-text text-lighten-3" href="#!">Contacto</a></li>
+                        <li><a class="white-text text-lighten-3" href="#!">Ubicacion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container white-text">
+                © 2019 Brayan Durán
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var eleme = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(eleme, {
+                direction: 'up',
+                hoverEnabled: false
+            });
+
+            var elem = document.querySelector('.collapsible.expandable');
+            var instance = M.Collapsible.init(elem, {
+                accordion: false
+            });
+
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                fullWidth: true,
+                indicators: true,
+            });
+
+            var element = document.getElementById("carousel")
+            var carousel = M.Carousel.getInstance(element);
+
+            setInterval(function () { carousel.next(); }, 5000);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+        });
+
+        M.AutoInit();
+    </script>
+</body>
+
+</html>
